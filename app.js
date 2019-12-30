@@ -30,10 +30,14 @@ function readURL(input) {
 //Reference for form collection(3)
 let formMessage = firebase.database().ref('register');
 
-//listen for submit event//(1)
-document
-  .getElementById('registrationform')
-  .addEventListener('submit', formSubmit);
+// //listen for submit event//(1)
+// document.getElementById('registrationform');
+// document.addEventListener('submit', formSubmit);
+
+var el = document.getElementById('registrationform');
+if(el){
+  el.addEventListener('submit', formSubmit, false);
+}
 
 //Submit form(1.2)
 function formSubmit(e) {
