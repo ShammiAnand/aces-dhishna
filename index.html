@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta charset=utf-8 />
   <link rel="stylesheet" href="style.css"/>
-  <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-<meta charset=utf-8 />
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  
+<script src="app.js"></script>
   <title>Registration Form</title>
 </head>
 
@@ -51,35 +55,13 @@
       <br>
       <br>
 
-      <img id="blah" src="" alt="photo">
+      <img id="blah" src="" alt="image">
       
 
       <button type="submit" sendMessage()>Submit</button>
   </form>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDfVOuuXvDdMM9JjFPd8Rlm1Vay37nOZ-s",
-    authDomain: "dhishna-5bced.firebaseapp.com",
-    databaseURL: "https://dhishna-5bced.firebaseio.com",
-    projectId: "dhishna-5bced",
-    storageBucket: "dhishna-5bced.appspot.com",
-    messagingSenderId: "982804724657",
-    appId: "1:982804724657:web:2af7381ab17033cb8d5b90",
-    measurementId: "G-Z21XMXKRV0"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-  <script src="app.js"></script>
 </body>
 
 </html>
