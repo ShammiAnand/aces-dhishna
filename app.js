@@ -13,7 +13,19 @@ function readURL(input) {
             reader.readAsDataURL(input.files[0]);
         }
     }
-
+// Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDfVOuuXvDdMM9JjFPd8Rlm1Vay37nOZ-s",
+    authDomain: "dhishna-5bced.firebaseapp.com",
+    databaseURL: "https://dhishna-5bced.firebaseio.com",
+    projectId: "dhishna-5bced",
+    storageBucket: "dhishna-5bced.appspot.com",
+    messagingSenderId: "982804724657",
+    appId: "1:982804724657:web:2af7381ab17033cb8d5b90",
+    measurementId: "G-Z21XMXKRV0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 //Reference for form collection(3)
 let formMessage = firebase.database().ref('register');
