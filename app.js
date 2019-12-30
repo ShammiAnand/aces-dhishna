@@ -1,15 +1,19 @@
-// Initialize Firebase(2)
-var config = {
-  apiKey: "AIzaSyDfVOuuXvDdMM9JjFPd8Rlm1Vay37nOZ-s",
-    authDomain: "dhishna-5bced.firebaseapp.com",
-    databaseURL: "https://dhishna-5bced.firebaseio.com",
-    projectId: "dhishna-5bced",
-    storageBucket: "dhishna-5bced.appspot.com",
-    messagingSenderId: "982804724657",
-    appId: "1:982804724657:web:2af7381ab17033cb8d5b90",
-    measurementId: "G-Z21XMXKRV0"
-};
-firebase.initializeApp(config);
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(150);
+
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
 
 //Reference for form collection(3)
 let formMessage = firebase.database().ref('register');
@@ -28,11 +32,11 @@ function formSubmit(e) {
   let description = document.querySelector('#description').value;
   let namec = document.querySelector('#namec').value;
   let phone = document.querySelector('#phone').value;
-  let file = document.querySelector('#file').value;
+  // let file = document.querySelector('#file').value;
   
 
   //send message values
-  sendMessage(name, caption, description, namec, phone,file);
+  sendMessage(name, caption, description, namec, phone);
 
   //Show Alert Message(5)
   document.querySelector('.alert').style.display = 'block';
@@ -48,7 +52,7 @@ function formSubmit(e) {
 
 //Send Message to Firebase(4)
 
-function sendMessage(name, caption, description, namec, phone,file) {
+function sendMessage(name, caption, description, namec, phone) {
   let newFormMessage = formMessage.push();
   newFormMessage.set({
     name: name,
